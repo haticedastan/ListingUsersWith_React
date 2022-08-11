@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import AddUser from "./Components/AddUser";
-import Users from "./Components/Users";
+
 
 export default class App extends Component {
   constructor() {
@@ -29,10 +29,11 @@ export default class App extends Component {
     const appName = "User Listing";
     return (
       <div className="container">
-        {appName}
+        <hr/>
+        {appName} 
         <hr />
         <AddUser/>
-        <Users/>
+        <hr/>
       </div>
     );
   }
