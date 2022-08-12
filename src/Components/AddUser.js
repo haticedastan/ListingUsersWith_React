@@ -5,16 +5,16 @@ export default class AddUser extends Component {
     return (
       <div>
         <form>
-        <div class="form-group">
-    <label for="name">Name</label>
-    <input type="name" class="form-control" id="name" placeholder="Enter name"/>
+        <div className="form-group">
+    <label htmlFor="name">Name</label>
+    <input type="name" className="form-control" id="name" placeholder="Enter name"/>
   </div>
-  <div class="form-group">
-    <label for="email">Email address</label>
-    <input type="email" class="form-control" id="email" placeholder="Enter email"/>
+  <div className="form-group">
+    <label htmlFor="email">Email address</label>
+    <input type="email" className="form-control" id="email" placeholder="Enter email"/>
   </div>
 
-  <button type="submit" class="btn btn-primary btn-block">Add New User</button>
+  <button type="submit" className="btn btn-primary btn-block">Add New User</button>
 </form>
       </div>
     )

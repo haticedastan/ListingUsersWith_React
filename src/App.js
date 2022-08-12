@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import AddUser from "./Components/AddUser";
+import User from "./Components/User";
+import Users from "./Components/Users";
 
 
 export default class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      users: [
+      accounts: [
         {
           id: 1,
           name: "hatice daştan",
@@ -29,11 +31,10 @@ export default class App extends Component {
     const appName = "User Listing";
     return (
       <div className="container">
-        <hr/>
         {appName} 
-        <hr />
+        
         <AddUser/>
-        <hr/>
+        <Users accounts={this.state.accounts}/>
       </div>
     );
   }
