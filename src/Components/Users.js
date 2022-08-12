@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import User from "./User";
 export default class Users extends Component {
   render() {
-    const {accounts} = this.props;
+    const {users , deleteUser} = this.props;
     return (
       <div>
         <table className="table">
@@ -16,12 +16,13 @@ export default class Users extends Component {
           </thead>
           <tbody>
             {
-                accounts.map (account=>{
-                    const {id,name,email} =account
+                users.map (user=>{
+                    const {id,name,email} =user
                     return<User key={id}
                     id ={id}
                     name={name}
                     email={email}
+                    deleteUser={deleteUser}
                     />
                 })
             }

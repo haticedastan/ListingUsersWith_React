@@ -5,10 +5,14 @@ import Users from "./Components/Users";
 
 
 export default class App extends Component {
+
+
+
+ 
   constructor(props) {
     super(props);
     this.state = {
-      accounts: [
+      users: [
         {
           id: 1,
           name: "hatice daştan",
@@ -26,15 +30,31 @@ export default class App extends Component {
         },
       ],
     };
+    this.deleteUser = this.deleteUser.bind(this)
+
   }
+  deleteUser(id){
+    let updatedUsers= this.state.users
+    updatedUsers=updatedUsers.filter(user => user.id !== id)
+    //state direct ımutable
+    this.setState({
+      users:updatedUsers
+    })
+
+  }
+  
   render() {
     const appName = "User Listing";
     return (
       <div className="container">
+        <hr />
         {appName} 
+        <hr />
         
         <AddUser/>
-        <Users accounts={this.state.accounts}/>
+        <hr />
+        <Users deleteUser={this.deleteUser} users={this.state.users}/>
+        <hr />
       </div>
     );
   }
