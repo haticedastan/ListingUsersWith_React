@@ -8,7 +8,7 @@ export default class User extends Component {
           <th scope="row">1</th>
           <td>Mark</td>
           <td>Otto</td>
-          <td><button className="btn btn-danger">Danger</button></td>
+          <td><button className="btn btn-danger">Delete</button></td>
         </tr>
     );
   }
